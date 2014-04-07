@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string></string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>4D386147-5924-4BF8-8972-103C15A5831B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>533C6647-8D51-4B03-913D-0DA84672B91A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>533C6647-8D51-4B03-913D-0DA84672B91A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7BC4E93C-C8C5-42C3-A449-F4BB04A0404F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Dominik Hofmann</string>
+	<key>description</key>
+	<string>Find Contao Insert Tags</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Contao Insert Tags</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>keyword</key>
+				<string>it</string>
+				<key>runningsubtext</key>
+				<string>Insert Tags loading</string>
+				<key>script</key>
+				<string>$in = "{query}";
+require('insertTags.php');</string>
+				<key>subtext</key>
+				<string>Search for Contao Insert Tags</string>
+				<key>title</key>
+				<string>Contao Insert Tags</string>
+				<key>type</key>
+				<integer>1</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>533C6647-8D51-4B03-913D-0DA84672B91A</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>7BC4E93C-C8C5-42C3-A449-F4BB04A0404F</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>hotkey</key>
+				<integer>34</integer>
+				<key>hotmod</key>
+				<integer>1835008</integer>
+				<key>hotstring</key>
+				<string>I</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>4D386147-5924-4BF8-8972-103C15A5831B</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>4D386147-5924-4BF8-8972-103C15A5831B</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>533C6647-8D51-4B03-913D-0DA84672B91A</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>7BC4E93C-C8C5-42C3-A449-F4BB04A0404F</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>http://domi-online.de</string>
+</dict>
+</plist>
