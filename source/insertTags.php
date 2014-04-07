@@ -2,16 +2,11 @@
 
 require_once('workflows.php');
 $w = new Workflows();
-
-$insertTags = file_get_contents("insertTags.csv");
-
-$fp = fopen('insertTags.csv', 'r');
+$fp = fopen('http://files.domi-online.de/insertTags.csv', 'r');
 $results = array();
 $i=0;
 while (!feof($fp)) {
     $row = fgetcsv($fp,0,';');
-    
-    
     $temp = array(
   		'uid' => $i,
   		'arg' => $row[0],
