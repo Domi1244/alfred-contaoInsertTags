@@ -23,9 +23,18 @@ while (!feof($fp)) {
 fclose($fp);
 
 if(!empty($in)){
+  $in = explode(' ',$in);
   foreach ($results as $key => $value){
-  	if(strpos(strtolower($value['title']),strtolower($in)) === false && strpos(strtolower($value['subtitle']),strtolower($in)) === false) {
-  		unset($results[$key]);
+  	$getItem = true;
+  	foreach($in as $input){
+  		if(!empty($input)){
+	  		if(strpos(strtolower($value['title']),strtolower($input)) === false && strpos(strtolower($value['subtitle']),strtolower($input)) === false) {
+		  		$getItem = false;
+		  	}	
+  		}
+  	}
+  	if($getItem === false){
+	  	unset($results[$key]);
   	}
   } 
 }
