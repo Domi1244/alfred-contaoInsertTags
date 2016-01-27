@@ -1,10 +1,11 @@
-{{link::*}};Dieses Tag wird mit einem Link zu einer interne Seite ersetzt (ersetzen Sie * mit der ID oder dem Alias).
-{{link::back}};"Dieses Tag wird mit der zuletzt besuchte Seite ersetzt. Kann auch mit ""link_open"", ""link_url"" und ""link_title"" verwendet werden."
+{{link::*}};Dieses Tag wird mit einem Link zu einer internen Seite ersetzt (ersetzen Sie * mit der ID oder dem Alias).
+{{link::back}};Dieses Tag wird mit einem Link zur der zuletzt besuchte Seite ersetzt. Kann auch als {{link_open::back}}, {{link_url::back}} und{{link_title::back}} verwendet werden.
 {{link::login}};Dieses Tag wird mit einem Link zur Anmeldeseite des aktuellen Frontend-Benutzers (falls vorhanden) ersetzt.
 {{link_open::*}};Wird mit dem öffnenden Tag eines Links zu einer internen Seite ersetzt:{{link_open::12}}Hier klicken{{link_close}}.
 {{link_url::*}};"Dieses Tag wird mit der URL einer internen Seite ersetzt: <a href=""{{link_url::12}}"">Hier klicken</a>."
 {{link_title::*}};"Dieses Tag wird mit dem Titel einer internen Seite ersetzt: <a title=""{{link_title::12}}"">Hier klicken</a>."
-{{link_close}};Wird mit dem schließenden Tag eines Links zu einer internen Seite ersetzt:{{link_open::12}}Hier klicken{{link_close}}.
+{{link_name::*}};Dieses Tag wird mit dem Namen einer internen Seite ersetzt: <a>{{link_name::12}}</a>.
+{{link_close}};Wird mit dem schließenden Tag eines Links zu einer internen Seite ersetzt: {{link_open::12}}Hier klicken{{link_close}}.
 {{article::*}};Dieses Tag wird mit einem Link zu einem Artikel ersetzt (ersetzen Sie * mit der ID oder dem Alias).
 {{article_open::*}};Wird mit dem öffnenden Tag eines Links zu einem Artikel ersetzt:{{article_open::12}}Hier klicken{{link_close}}.
 {{article_url::*}};"Dieses Tag wird mit der URL eines Artikels ersetzt: <a href=""{{article_url::12}}"">Hier klicken</a>."
@@ -13,12 +14,14 @@
 {{news_open::*}};Wird mit dem öffnenden Tag eines Links zu einer Nachricht ersetzt:{{news_open::12}}Hier klicken{{link_close}}.
 {{news_url::*}};"Dieses Tag wird mit der URL einer Nachricht ersetzt: <a href=""{{news_url::12}}"">Hier klicken</a>."
 {{news_title::*}};"Dieses Tag wird mit dem Titel einer Nachricht ersetzt: <a title=""{{news_title::12}}"">Hier klicken</a>."
+{{news_feed::*}};Dieser Tag wird mit der URL zu einem News-Feed ersetzen (ersetzen Sie * mit der ID).
 {{event::*}};Dieses Tag wird mit einem Link zu einem Event ersetzt (ersetzen Sie * mit der ID oder dem Alias).
-{{event_open::*}};Wird mit dem öffnenden Tag eines Links zu einem Event ersetzt: {{event_open::12}}Hier klicken{{link_close}}.
+{{event_open::*}};Wird mit dem öffnenden Tag eines Links zu einem Event ersetzt:{{event_open::12}}Hier klicken{{link_close}}.
 {{event_url::*}};"Dieses Tag wird mit der URL eines Events ersetzt: <a href=""{{event_url::12}}"">Hier klicken</a>."
 {{event_title::*}};"Dieses Tag wird mit dem Titel eines Events ersetzt: <a title=""{{event_title::12}}"">Hier klicken</a>."
+{{calendar_feed::*}};Dieser Tag wird mit der URL zu einem Kalender-Feed ersetzen (ersetzen Sie * mit der ID).
 {{faq::*}};Dieses Tag wird mit einem Link zu einer häufig gestellten Frage ersetzt (ersetzen Sie * mit der ID oder dem Alias).
-{{faq_open::*}};Wird mit dem öffnenden Tag eines Links zu einer Frage ersetzt: {{faq_open::12}}Hier klicken{{link_close}}.
+{{faq_open::*}};Wird mit dem öffnenden Tag eines Links zu einer Frage ersetzt:{{faq_open::12}}Hier klicken{{link_close}}.
 {{faq_url::*}};"Dieses Tag wird mit der URL einer Frage ersetzt: <a href=""{{faq_url::12}}"">Hier klicken</a>."
 {{faq_title::*}};"Dieses Tag wird mit dem Titel einer Frage ersetzt: <a title=""{{faq_title::12}}"">Hier klicken</a>."
 {{user::firstname}};Dieses Tag wird mit dem Vornamen des angemeldeten Benutzers ersetzt.
@@ -45,7 +48,8 @@
 {{page::mainAlias}};Dieses Tag wird mit dem Alias der übergeordneten Hauptseite ersetzt.
 {{page::mainTitle}};Dieses Tag wird mit dem Namen der übergeordneten Hauptseite ersetzt.
 {{page::mainPageTitle}};Dieses Tag wird mit dem Titel der übergeordneten Hauptseite ersetzt.
-{{page::rootTitle}};Dieses Tag wird mit dem Titel der Webseite ersetzt.
+{{page::rootTitle}};Dieses Tag wird mit dem Namen der Webseite ersetzt.
+{{page::rootPageTitle}};Dieses Tag wird mit dem Titel der Webseite ersetzt.
 {{env::host}};Dieses Tag wird mit dem aktuellen Hostnamen ersetzt.
 {{env::url}};Dieses Tag wird mit dem Hostnamen und dem Protokoll ersetzt.
 {{env::path}};Dieses Tag wird mit der aktuellen Basis-URL samt Pfad zum Contao-Verzeichnis ersetzt.
@@ -53,8 +57,7 @@
 {{env::ip}};Dieses Tag wird mit der IP-Adresse des aktuellen Besuchers ersetzt.
 {{env::referer}};Dieses Tag wird mit der URL der zuletzt besuchten Seite ersetzt.
 {{env::files_url}};Dieses Tag wird mit der statischen URL des Uploadverzeichnis ersetzt.
-{{env::script_url}};Dieses Tag wird mit der statischen URL des Skriptverzeichnis ersetzt.
-{{env::plugins_url}};Dieses Tag wird mit der statischen URL des Pluginsverzeichnis ersetzt.
+{{env::assets_url}};Dieses Tag wird mit der statischen URL des Assets-Verzeichnis ersetzt.
 {{insert_article::*}};Dieses Tag wird mit dem referenzierten Artikel ersetzt (ersetzen Sie * mit der ID oder dem Alias).
 {{insert_content::*}};Dieses Tag wird mit dem referenzierten Inhaltselement ersetzt (ersetzen Sie * mit der ID des Elements).
 {{insert_module::*}};Dieses Tag wird mit dem referenzierten Modul ersetzt (ersetzen Sie * mit der ID des Moduls).
@@ -62,26 +65,29 @@
 {{article_teaser::*}};Dieses Tag wird mit dem Teaser eines Artikels ersetzt (ersetzen Sie * mit der ID des Artikels).
 {{news_teaser::*}};Dieses Tag wird mit dem Teaser einer Nachricht ersetzt (ersetzen Sie * mit der ID der Nachricht).
 {{event_teaser::*}};Dieses Tag wird mit dem Teaser eines Events ersetzt (ersetzen Sie * mit der ID des Events).
-{{file::*}};"Dieses Tag wird mit dem Inhalt einer .php- oder .tpl-Datei aus dem ""templates""-Verzeichnis ersetzt (ersetzen Sie * mit dem Namen). Bei Bedarf können Sie Argumente übergeben: {{file::file.php?arg1=val}}"
+{{file::*}};"Dieses Tag wird mit dem Inhalt einer .php-, .tpl-, .xhtml- oder .html5-Datei aus dem ""templates""-Verzeichnis ersetzt (ersetzen Sie * mit dem Namen). Bei Bedarf können Sie Argumente übergeben:{{file::file.php?arg1=val}}. Mittels UUID kann außerdem der Pfad einer Datei aus der Datenbank abgefragt werden: {{file::6939a448-9b30-11e4-bcba-079af1e9baea}}."
 {{date}};Dieses Tag wird mit dem aktuellen Datum gemäß des globalen Datumsformats ersetzt.
 {{date::*}};Dieses Tag wird mit dem aktuellen Datum gemäß eines individuellen Datumsformats ersetzt.
 {{last_update}};Dieses Tag wird mit dem Datum der letzten Aktualisierung gemäß des globalen Datumsformats ersetzt.
 {{last_update::*}};Dieses Tag wird mit Datum der letzten Aktualisierung gemäß eines individuellen Datumsformats ersetzt.
 {{email::*}};Dieses Tag wird mit einem verschlüsselten Link zu einer E-Mail-Adresse ersetzt.
-{{lang::*}};"Mit diesem Tag können fremdsprachige Wörter in einem Text markiert werden: {{lang::fr}}Au revoir{{lang}}. Dies wird ersetzt mit <span lang=""fr"" xml:lang=""fr"">Au revoir</span>."
-{{abbr::*}};"Abkürzungen in einem Text markieren: {{abbr::World Wide Web}}WWW{{abbr}}. Dies wird ersetzt mit<abbr title=""World Wide Web"">WWW</abbr>."
-{{acronym::*}};Acronyme in einem Text markieren: {{acronym::Multipurpose Internet Mail Extensions}}MIME{{acronym}}. Dies wird ersetzt mit MIME.
+{{email_open::*}};Dieses Tag wird mit einem verschlüsselten Link zu einer E-Mail-Adresse ersetzt. Allerdings wird das schließende </a> nicht angefügt.
+{{email_url::*}};Dieses Tag wird nur durch die verschlüsselte E-Mail-Adresse ersetzt.
+{{lang::*}};"Mit diesem Tag können fremdsprachige Wörter in einem Text markiert werden: {{lang::fr}}Au revoir{{lang}}. Dies wird ersetzt mit <span lang=""fr"">Au revoir</span> und fügt xml:lang=""fr"" hinzu falls das Seitenformat XHTML ist."
+{{abbr::*}};"Abkürzungen in einem Text markieren: {{abbr::World Wide Web}}WWW{{abbr}}. Dies wird ersetzt mit <abbr title=""World Wide Web"">WWW</abbr>."
+{{acronym::*}};"Akronyme in einem Text markieren: {{acronym::Multipurpose Internet Mail Extensions}}MIME{{acronym}}. Dies wird ersetzt mit <acronym title=""Multipurpose Internet Mail Extensions"">MIME</acronym>."
 {{ua::*}};"Eigenschaften des Browsers (User Agent) ausgeben: {{ua::browser}}. Dies wird beispielsweise ersetzt mit ""chrome""."
-{{iflng::*}};Dieses Tag wird komplett entfernt, wenn die Sprache der Seite nicht mit der Tag-Sprache übereinstimmt. Sie können so sprachspezifische Bezeichnungen erstellen:{{iflng::en}}Your name{{iflng}}{{iflng::de}}Ihr Name{{iflng}}
-{{ifnlng::*}};Dieses Tag wird komplett entfernt, wenn die Sprache der Seite mit der Tag-Sprache übereinstimmt. Sie können so sprachspezifische Bezeichnungen erstellen: {{ifnlng::de}}Your name{{iflng}}{{iflng::de}}Ihr Name{{iflng}}
-{{image::*}};"Dieses Tag wird mit der Vorschauansicht eines Bildes ersetzt: {{image::files/image.jpg?width=200&height=150}}.
+{{iflng::*}};Dieses Tag wird komplett entfernt, wenn die Sprache der Seite nicht mit der Tag-Sprache übereinstimmt. Sie können so sprachspezifische Bezeichnungen erstellen: {{iflng::en}}Your name{{iflng::de}}Ihr Name{{iflng}}
+{{ifnlng::*}};Dieses Tag wird komplett entfernt, wenn die Sprache der Seite mit der Tag-Sprache übereinstimmt. Sie können so sprachspezifische Bezeichnungen erstellen: {{ifnlng::de}}Your name{{ifnlng}}{{iflng::de}}Ihr Name{{iflng}}
+{{image::*}};"Dieses Tag wird mit der Vorschauansicht eines Bildes ersetzt (wobei * eine Datenbank ID, eine UUID oder ein Pfad aus dem Dateisystem sein kann):{{image::58ca4a90-2d30-11e4-8c21-0800200c9a66?width=200&height=150}}.
 width: Breite des Vorschaubildes,
 height: Höhe des Vorschaubildes,
 alt: Alternativer Text,
 class: CSS-Klasse,
 rel: rel-Attribut (z.B. ""lightbox""),
 mode: Modus (""proportional"", ""crop"" oder ""box"")."
-{{label::*}};Dieses Tag wird mit einer Übersetzung ersetzt: {{label::CNT:au}} oder {{label::tl_article:title:0}}. Beachten Sie, dass innerhalb des Pfads zur Bezeichnung nur einfache Doppelpunkte verwendet werden.
-{{version::*}};Dieses Tag wird mit der verwendeten Contao-Version (z.B. 2.11.2) ersetzt.
-{{request_token::*}};Dieses Tag wird mit dem zur aktuellen Session gehörenden Request-Token ersetzt.
-{{toggle_view}};Dieser Tag wird mit einem Link ersetzt, welcher zwischen Mobile- und Desktop-Layout wechselt.
+{{label::*}};"Dieses Tag wird mit einer Übersetzung ersetzt. Der erste Parameter ist der Name einer Sprachdatei oder einem Akronym (z.B. CNT für Länder oderLNG für Sprachen). Beispiele: {{label::CNT:au}} wird zu ""Australien"" und {{label::tl_article:title:0}} wird zu ""Titel"". Beachten Sie, dass innerhalb des Pfads zur Bezeichnung nur einfache Doppelpunkte verwendet werden."
+{{version}};Dieses Tag wird mit der verwendeten Contao-Version (z.B. 3.2.7) ersetzt.
+{{request_token}};Dieses Tag wird mit dem zur aktuellen Session gehörenden Request-Token ersetzt.
+{{toggle_view}};Dieses Tag wird mit einem Link ersetzt, welcher zwischen Mobile- und Desktop-Layout wechselt.
+{{br}};Dieses Tag wird mit einem HTML <br> Element (Zeilenumbruch) ersetzt.
